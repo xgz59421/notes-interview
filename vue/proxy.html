@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>proxy</title>
+</head>
+<body>
+  <div id="app"></div>
+  <input type="text" id="ipt">
+  <script>
+    let el = document.getElementById('app');
+    let ipt = document.getElementById('ipt');
+    let data = {
+      msg : 'hello'
+    }
+    el.innerHTML = data.msg;
+
+    let proxy = new Proxy(data, {
+      get(target, key){
+        return target[key]
+      },
+      set(target, key, value){
+        if (value == target[key]) return
+        target[key] = value
+        el.innerHTML = data.msg;
+      }
+    })
+
+    console.log(proxy.msg);
+    setTimeout(() => {
+      proxy.msg = 'world';
+    }, 2000);
+    
+    ipt.addEventListener('keyup', (e)=>{
+      proxy.msg = e.target.value
+    })
+ 
+  </script>
+</body>
+</html>

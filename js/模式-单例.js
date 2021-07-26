@@ -1,23 +1,21 @@
 // 计数器例子
 
-let Counter = (function () {
-  let instance = null
+function createCount() {
   let count = 0
-  
-  function createCount() {
-    console.log('111111111');
-    return {
-      add(){
-        count ++
-      },
-      print(){
-        console.log(count);
-      }
+  return {
+    add(){
+      count ++
+    },
+    print(){
+      console.log(count);
     }
   }
+}
+
+let Counter = (function () {
+  let instance = null
   return function () {
     if (instance == null) {
-      console.log('222');
        instance = new createCount()
     } 
     return instance

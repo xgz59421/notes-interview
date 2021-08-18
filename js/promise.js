@@ -1,3 +1,9 @@
+// promise 与 async/await 区别
+// 1 promise是ES6，async/await是ES7
+// 2 async/await相对于promise来讲，写法更加优雅
+// 3 reject状态：
+//     1）promise错误可以通过catch来捕捉，建议尾部捕获错误，
+//     2）async/await既可以用.then又可以用try-catch捕捉
 
 const PENDING = 'pending'; // 等待
 const FULFILLED = 'fulfilled'; // 成功

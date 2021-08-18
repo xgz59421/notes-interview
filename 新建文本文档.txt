@@ -1,0 +1,5 @@
+HTML&CSS：浏览器内核、渲染原理、依赖管理、兼容性、CSS语法、层次关系，常用属性、布局、选择器、权重、CSS盒模型、Hack、CSS预处理器等。
+
+JavaScript：数据类型、运算、对象、Function、继承、闭包、作用域、事件、BOM、内存泄漏、异步请求、模板引擎、模块化、Flux、Nodejs等。
+ 
+框架和类库：ajax、jQuery、Bootstrap、axios、Vue、Vuex、React、element-ui、layui、webpack等。

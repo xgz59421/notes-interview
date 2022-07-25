@@ -1,3 +1,12 @@
+##### 浏览器内核有几种
+```
+IE浏览器内核：Trident内核
+Chrome浏览器内核: Chrome内核
+Firefox浏览器内核：Gecko内核，俗称Firefox内核
+苹果Safari浏览器内核：Webkit内核
+Opera浏览器内核：最初是自己的Presto内核
+```
+
 ##### 从浏览器地址输入url到显示页面的步骤
 1. 浏览器根据请求的url交给dns域名解析,找到真实的ip,向服务器发送请求; 
 2. 服务器交给后台处理完成后返回数据,浏览器接收文件(html,js,css,图像等); 

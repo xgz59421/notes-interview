@@ -4,6 +4,8 @@
 let arr = [1, 2, 3, 4, 5];
 let obj = {}
 
+// console.log(arr, arr.constructor, arr.constructor.name)
+
 // 1. Array.isArray
 console.log(Array.isArray(arr));
 

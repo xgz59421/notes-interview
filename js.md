@@ -47,3 +47,35 @@ substr (start, length)
 --------------------------主线程-------------------------->
 宏任务(script代码)-----> 微任务(Event Queue) -------> 宏任务(Event Queue)
 ```
+
+#### 8. 深拷贝和浅拷贝的区别：
+```
+https://blog.csdn.net/qq_45479404/article/details/125001566
+
+浅拷贝主要是对指针的拷贝，拷贝后两个指针指向同一个内存空间.
+深拷贝会创造一个一摸一样的对象，新对象和原对象不共享内存，修改新对象不会改变原对对象.
+
+1、浅拷贝
+// ​​Object.assign​​方法实行的是浅拷贝
+const obj1 = {a: {b: 1}}
+const obj2 = Object.assign({}, obj1)
+obj1.a.b = 2
+console.log('obj2', obj2)
+// obj2.a.b = 2
+
+2、深拷贝
+a、JSON转换
+JSON.parse(JSON.stringify(obj))
+缺点：
+1) 如果对象有函数，函数无法被拷贝下来
+2)无法拷贝对象原型链上的属性和方法
+3)当数据的层次很深，会栈溢出
+
+b、递归函数
+
+Array的深拷贝
+通过slice方法
+通过concat方法
+通过ES6语法中的 …
+通过Array.from 方法
+```
